@@ -1,0 +1,80 @@
+@font-face {
+    font-family: Pipboy;
+    src: url(../monofonto/monofonto.ttf);
+}
+
+
+body {
+    color: #14fe17;
+    background: #272b23;
+    font-family: Pipboy;
+}
+
+body::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    background: repeating-linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.1) 20px, transparent 1px, transparent 1px);
+}
+
+ul > li > a {
+    color: #14fe17;  
+
+}
+
+#numerge {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 10px;
+}
+
+.navbar {
+    border-bottom: 2px solid;
+    margin: 0px 20px 0px 20px;
+}
+
+.navbar::before, .navbar::after {
+    height: 9px;
+    width: 2px;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 5000;
+    background: #14fe17;
+    bottom: -10px;
+
+
+}
+
+.navbar::before {
+    left: 0px;
+}
+
+.navbar::after {
+    right: 0px;
+}
+
+#sus li {
+    width: 19%;
+    font-size:32px;
+    text-align: center;
+    color: #14fe17 ;
+}
+
+#sus a {
+    color: #14fe17;
+    line-height: 0px;
+    margin-top: 20px;
+}
+
+.navbar-item.active::before {
+    background: red;
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 20px;
+}
